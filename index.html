@@ -1,0 +1,1251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KLINS TECH | Digital Solutions</title>
+
+<meta name="description" content="KLINS TECH builds professional websites, online stores and digital solutions for businesses in Kenya.">
+<meta name="theme-color" content="#030b19">
+
+<style>
+:root {
+  --bg: #030b19;
+  --bg2: #07162d;
+  --card: #0b1c36;
+  --blue: #087cff;
+  --cyan: #04c9ff;
+  --green: #00d99a;
+  --white: #f5f9ff;
+  --muted: #b0c0d5;
+  --border: rgba(65,164,255,.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+.container {
+  width: 88%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(3,11,25,.96);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(15px);
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  font-size: 35px;
+  font-weight: 1000;
+  font-style: italic;
+  letter-spacing: -5px;
+  color: var(--cyan);
+  text-shadow: 0 0 20px rgba(0,180,255,.5);
+}
+
+.brand-name {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.brand-name span {
+  color: var(--cyan);
+}
+
+.brand small {
+  display: block;
+  color: #a9b9d0;
+  font-size: 10px;
+  letter-spacing: 0;
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #dce7f6;
+  font-size: 14px;
+  transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--cyan);
+}
+
+.nav-links a.active::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: var(--cyan);
+  margin: 8px auto 0;
+  border-radius: 5px;
+}
+
+.nav-contact {
+  background: linear-gradient(100deg,var(--cyan),var(--blue));
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.menu {
+  display: none;
+  border: 0;
+  color: white;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 78% 50%,#06458c 0%,transparent 40%),
+    linear-gradient(110deg,#061d42,#020b19 75%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 300px;
+  right: -100px;
+  top: 70px;
+  border: 2px solid rgba(0,177,255,.3);
+  border-radius: 50%;
+  transform: rotate(-15deg);
+  box-shadow: 0 0 30px #007bff;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 25px;
+  position: relative;
+  z-index: 2;
+  padding: 55px 0;
+}
+
+.hero h1 {
+  font-size: clamp(36px,5vw,58px);
+  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.gradient {
+  background: linear-gradient(90deg,#08aaff,#00d5ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  margin: 20px 0;
+  color: #d1deee;
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 520px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 30px;
+  background: linear-gradient(100deg,var(--cyan),var(--blue));
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(0,153,255,.5);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--cyan);
+  color: white;
+}
+
+/* HERO DEVICES */
+
+.devices {
+  height: 310px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.laptop {
+  width: 340px;
+  position: relative;
+  z-index: 2;
+}
+
+.laptop-screen {
+  height: 210px;
+  background: linear-gradient(135deg,#061d45,#0053a8);
+  border: 7px solid #101c30;
+  border-bottom: 12px solid #152b48;
+  border-radius: 14px 14px 5px 5px;
+  box-shadow: 0 0 30px rgba(0,140,255,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 65px;
+  color: var(--cyan);
+  text-shadow: 0 0 20px var(--cyan);
+}
+
+.laptop-base {
+  height: 13px;
+  width: 110%;
+  margin-left: -5%;
+  background: linear-gradient(#9bcfff,#174c83,#07182e);
+  border-radius: 3px 3px 15px 15px;
+}
+
+.phone {
+  position: absolute;
+  width: 100px;
+  height: 205px;
+  right: 0;
+  bottom: 30px;
+  z-index: 3;
+  border: 5px solid #111e30;
+  background: linear-gradient(160deg,#00132e,#075ab2);
+  border-radius: 22px;
+  box-shadow: 0 0 25px rgba(0,145,255,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 900;
+  font-size: 16px;
+  transform: rotate(5deg);
+}
+
+.phone-logo {
+  color: var(--cyan);
+  font-size: 33px;
+  display: block;
+}
+
+/* SECTION GENERAL */
+
+section {
+  scroll-margin-top: 80px;
+}
+
+.section {
+  padding: 65px 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  font-size: 31px;
+  margin-bottom: 5px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* SERVICES */
+
+.services {
+  background: linear-gradient(180deg,#030b19,#06152b);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  background: linear-gradient(120deg,#0b203c,#09172b);
+  border-radius: 12px;
+  transition: .3s;
+}
+
+.service-card:hover {
+  border-color: var(--cyan);
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0,140,255,.12);
+}
+
+.service-icon {
+  font-size: 35px;
+  color: var(--cyan);
+  min-width: 42px;
+}
+
+.service-card h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+  background:
+    radial-gradient(ellipse at 50% 50%,#0b2650,transparent 65%),
+    #030b19;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+}
+
+.project {
+  overflow: hidden;
+  border: 1px solid #1d5d9c;
+  border-radius: 10px;
+  background: #08182e;
+  transition: .3s;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 22px rgba(0,137,255,.3);
+}
+
+.project-preview {
+  height: 175px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  overflow: hidden;
+}
+
+.restaurant {
+  background: linear-gradient(130deg,#291609,#a34c13);
+}
+
+.fashion {
+  background: linear-gradient(130deg,#eee2d6,#a98b75);
+  color: #171717;
+}
+
+.business {
+  background: linear-gradient(130deg,#063e73,#07182e);
+}
+
+.project-preview strong {
+  font-size: 22px;
+  max-width: 200px;
+}
+
+.project-preview small {
+  margin-top: 8px;
+}
+
+.project-label {
+  padding: 12px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* PRICING */
+
+.pricing {
+  background: #030b19;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+
+.price-card {
+  background: linear-gradient(150deg,#0c203b,#06152b);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 23px;
+  position: relative;
+}
+
+.price-card.featured {
+  border: 2px solid #058cff;
+  box-shadow: 0 0 20px rgba(0,136,255,.2);
+}
+
+.popular {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg,var(--cyan),var(--blue));
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.price-card h3 {
+  text-align: center;
+  font-size: 19px;
+}
+
+.price {
+  text-align: center;
+  font-size: 29px;
+  color: var(--cyan);
+  font-weight: 900;
+  margin: 12px 0;
+}
+
+.price-card > p {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.price-card ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.price-card li {
+  color: #c5d3e7;
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+.price-card li::before {
+  content: "✓";
+  color: var(--green);
+  margin-right: 9px;
+}
+
+.price-card .btn {
+  width: 100%;
+  font-size: 12px;
+  padding: 11px;
+}
+
+/* ABOUT */
+
+.about {
+  background: linear-gradient(110deg,#06172c,#061d3c);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.about h2 {
+  font-size: 24px;
+}
+
+.about p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.slogan {
+  text-align: center;
+  color: var(--cyan);
+  font-size: 23px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.about-contact {
+  text-align: right;
+}
+
+/* CONTACT */
+
+.contact {
+  background: #061327;
+}
+
+.contact-box {
+  max-width: 650px;
+  margin: auto;
+  background: #0a1d37;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.contact-box label {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.contact-box input,
+.contact-box select,
+.contact-box textarea {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 8px 0 17px;
+  color: white;
+  background: #041226;
+  border: 1px solid #24466c;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus,
+.contact-box select:focus {
+  border-color: var(--cyan);
+}
+
+.contact-box textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.contact-box select option {
+  background: #07162d;
+}
+
+.contact-box button {
+  width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+  background: #020916;
+  border-top: 1px solid var(--border);
+}
+
+.footer-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 22px 0;
+}
+
+.footer-brand {
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.footer-brand span {
+  color: var(--cyan);
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding: 17px 0;
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  right: 20px;
+  z-index: 900;
+  background: #00c985;
+  color: #001d17;
+  padding: 14px 18px;
+  border-radius: 40px;
+  font-size: 13px;
+  font-weight: bold;
+  box-shadow: 0 5px 25px rgba(0,220,150,.35);
+}
+
+/* MOBILE */
+
+@media(max-width:850px) {
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-contact {
+    display: none;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .devices {
+    max-width: 480px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-contact {
+    text-align: center;
+  }
+}
+
+@media(max-width:600px) {
+  .container {
+    width: 91%;
+  }
+
+  header {
+    height: 65px;
+  }
+
+  .brand-name {
+    font-size: 19px;
+  }
+
+  .brand-logo {
+    font-size: 30px;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #07162d;
+    padding: 20px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 8px 0;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-grid {
+    padding: 65px 0 35px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .devices {
+    height: 240px;
+  }
+
+  .laptop {
+    width: 260px;
+  }
+
+  .laptop-screen {
+    height: 155px;
+    font-size: 50px;
+  }
+
+  .phone {
+    width: 72px;
+    height: 155px;
+    right: -5px;
+    font-size: 12px;
+  }
+
+  .service-grid,
+  .portfolio-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 55px 0;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-box {
+    padding: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+<div class="container">
+<nav>
+
+<a href="#home" class="brand">
+  <div class="brand-logo">KT</div>
+  <div>
+    <div class="brand-name">KLINS <span>TECH</span></div>
+    <small>Technology That Moves Your Business Forward.</small>
+  </div>
+</a>
+
+<button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+
+<div class="nav-links" id="navLinks">
+  <a href="#home" class="active">Home</a>
+  <a href="#services">Services</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<a href="#contact" class="nav-contact">Chat on WhatsApp</a>
+
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+<div class="container hero-grid">
+
+<div>
+  <h1>
+    We Build Digital
+    <span class="gradient">Experiences</span>
+    That Grow Businesses.
+  </h1>
+
+  <p>
+    We design and develop modern websites, online stores
+    and digital solutions that help businesses grow,
+    connect with customers and succeed online.
+  </p>
+
+  <div class="hero-buttons">
+    <a href="#contact" class="btn">➤ Start Your Project →</a>
+    <a href="#portfolio" class="btn btn-outline">▣ View Our Work</a>
+  </div>
+</div>
+
+<div class="devices">
+  <div class="laptop">
+    <div class="laptop-screen">&lt;/&gt;</div>
+    <div class="laptop-base"></div>
+  </div>
+
+  <div class="phone">
+    <div>
+      <span class="phone-logo">KT</span>
+      KLINS<br>TECH
+    </div>
+  </div>
+</div>
+
+</div>
+</section>
+
+<!-- SERVICES -->
+
+<section class="section services" id="services">
+<div class="container">
+
+<div class="section-heading">
+  <h2>Our <span class="gradient">Services</span></h2>
+  <p>Digital solutions designed for your business.</p>
+</div>
+
+<div class="service-grid">
+
+<div class="service-card">
+  <div class="service-icon">◎</div>
+  <div>
+    <h3>Website Development</h3>
+    <p>Professional, responsive and modern websites.</p>
+  </div>
+</div>
+
+<div class="service-card">
+  <div class="service-icon">🛒</div>
+  <div>
+    <h3>E-Commerce Solutions</h3>
+    <p>Online stores that grow your sales.</p>
+  </div>
+</div>
+
+<div class="service-card">
+  <div class="service-icon">▣</div>
+  <div>
+    <h3>Business Websites</h3>
+    <p>Build your brand online.</p>
+  </div>
+</div>
+
+<div class="service-card">
+  <div class="service-icon">&lt;/&gt;</div>
+  <div>
+    <h3>Portfolio Websites</h3>
+    <p>Showcase your skills and work.</p>
+  </div>
+</div>
+
+<div class="service-card">
+  <div class="service-icon" style="color:#00d99a">◉</div>
+  <div>
+    <h3>WhatsApp Integration</h3>
+    <p>Let customers contact you easily.</p>
+  </div>
+</div>
+
+<div class="service-card">
+  <div class="service-icon">⚙</div>
+  <div>
+    <h3>Website Maintenance</h3>
+    <p>Keep your site secure and updated.</p>
+  </div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+
+<section class="section portfolio" id="portfolio">
+<div class="container">
+
+<div class="section-heading">
+  <h2>Our <span class="gradient">Portfolio</span></h2>
+  <p>Explore examples of the solutions we can build.</p>
+</div>
+
+<div class="portfolio-grid">
+
+<div class="project">
+  <div class="project-preview restaurant">
+    <strong>Delicious Food,<br>Great Moments</strong>
+    <small>Restaurant demonstration website</small>
+  </div>
+  <div class="project-label">Restaurant Website</div>
+</div>
+
+<div class="project">
+  <div class="project-preview fashion">
+    <strong>Fashion Style<br>For Everyone</strong>
+    <small>Online fashion demonstration</small>
+  </div>
+  <div class="project-label">Online Fashion Store</div>
+</div>
+
+<div class="project">
+  <div class="project-preview business">
+    <strong>Grow Your Business<br>With KLINS TECH</strong>
+    <small>Professional business platform</small>
+  </div>
+  <div class="project-label">Business Portfolio</div>
+</div>
+
+</div>
+
+<p style="text-align:center;color:#9fb2cb;font-size:12px;margin-top:20px">
+  Demonstration concepts. Actual client projects will be added as completed.
+</p>
+
+</div>
+</section>
+
+<!-- PRICING -->
+
+<section class="section pricing" id="pricing">
+<div class="container">
+
+<div class="section-heading">
+  <h2>Our <span class="gradient">Packages</span></h2>
+  <p>Affordable solutions for different needs.</p>
+</div>
+
+<div class="pricing-grid">
+
+<div class="price-card">
+  <h3>Starter</h3>
+  <div class="price">KSh 3,000</div>
+  <p>For individuals and small businesses.</p>
+  <ul>
+    <li>Single-page website</li>
+    <li>Mobile responsive</li>
+    <li>Contact information</li>
+    <li>WhatsApp button</li>
+  </ul>
+  <a href="#contact" class="btn">Get Started</a>
+</div>
+
+<div class="price-card featured">
+  <span class="popular">MOST POPULAR</span>
+  <h3>Professional</h3>
+  <div class="price">KSh 5,000</div>
+  <p>For growing businesses.</p>
+  <ul>
+    <li>Up to five agreed pages</li>
+    <li>Modern design</li>
+    <li>WhatsApp integration</li>
+    <li>Contact form</li>
+    <li>Mobile responsive</li>
+  </ul>
+  <a href="#contact" class="btn">Get Started</a>
+</div>
+
+<div class="price-card">
+  <h3>Custom</h3>
+  <div class="price">Let's Discuss</div>
+  <p>For advanced requirements.</p>
+  <ul>
+    <li>Advanced features</li>
+    <li>E-commerce</li>
+    <li>Custom integrations</li>
+    <li>Custom design</li>
+  </ul>
+  <a href="#contact" class="btn">Get a Quote</a>
+</div>
+
+</div>
+
+<p style="text-align:center;color:#91a6c1;font-size:12px;margin-top:22px">
+  Domain, hosting and advanced functionality may cost extra.
+</p>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="section about" id="about">
+<div class="container about-grid">
+
+<div>
+  <h2>About <span class="gradient">KLINS TECH</span></h2>
+  <p>
+    KLINS TECH is a technology and digital solutions
+    brand focused on helping businesses establish
+    a professional online presence.
+  </p>
+  <p>
+    We believe every business deserves access to
+    quality digital solutions.
+  </p>
+</div>
+
+<div class="slogan">
+  Technology That<br>
+  Moves Your Business Forward.
+</div>
+
+<div class="about-contact">
+  <h3>Let's Build Something Great</h3>
+  <p>Have a project in mind? Get in touch with us today.</p>
+  <br>
+  <a href="#contact" class="btn">➤ Contact Us</a>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section contact" id="contact">
+<div class="container">
+
+<div class="section-heading">
+  <h2>Let's Build Something <span class="gradient">Great</span></h2>
+  <p>Tell us about your project. Let's discuss.</p>
+</div>
+
+<div class="contact-box">
+
+<form id="contactForm">
+
+<label for="clientName">Your Name</label>
+<input type="text" id="clientName" placeholder="Enter your name" required>
+
+<label for="clientPhone">Phone Number</label>
+<input type="tel" id="clientPhone" placeholder="Enter your number" required>
+
+<label for="service">Service Required</label>
+<select id="service" required>
+  <option value="">Choose a service</option>
+  <option>Website Development</option>
+  <option>E-Commerce Website</option>
+  <option>Business Website</option>
+  <option>Portfolio Website</option>
+  <option>WhatsApp Integration</option>
+  <option>Website Maintenance</option>
+  <option>Other</option>
+</select>
+
+<label for="details">Project Details</label>
+<textarea id="details" placeholder="Describe your project..." required></textarea>
+
+<button type="submit" class="btn">Send Enquiry via WhatsApp →</button>
+
+</form>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+<div class="container">
+
+<div class="footer-main">
+
+<div>
+  <div class="footer-brand">KLINS <span>TECH.</span></div>
+  <p style="color:#8fa4bf;font-size:12px">
+    Technology That Moves Your Business Forward.
+  </p>
+</div>
+
+<div class="footer-links">
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#contact">Contact</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+  © <span id="year"></span> KLINS TECH. All rights reserved.
+</div>
+
+</div>
+</footer>
+
+<a href="#contact" class="whatsapp-float">WhatsApp Us</a>
+
+<script>
+
+// ===================================
+// KLINS TECH CONFIGURATION
+// ===================================
+
+// Replace with your real Kenyan WhatsApp number.
+// Format: 254712345678 (without +)
+
+const BUSINESS_WHATSAPP = "2547XXXXXXXX";
+
+// MOBILE MENU
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function() {
+  navLinks.classList.toggle("show");
+});
+
+// CLOSE MENU AFTER CLICK
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", function() {
+    navLinks.classList.remove("show");
+  });
+});
+
+// CURRENT YEAR
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+// WHATSAPP CONTACT FORM
+
+document.getElementById("contactForm").addEventListener(
+  "submit",
+  function(event) {
+
+    event.preventDefault();
+
+    const name =
+      document.getElementById("clientName").value.trim();
+
+    const phone =
+      document.getElementById("clientPhone").value.trim();
+
+    const service =
+      document.getElementById("service").value;
+
+    const details =
+      document.getElementById("details").value.trim();
+
+    if (!/^254\d{9}$/.test(BUSINESS_WHATSAPP)) {
+      alert("Please configure your KLINS TECH WhatsApp number first.");
+      return;
+    }
+
+    const message =
+      "NEW KLINS TECH CUSTOMER ENQUIRY\n\n" +
+      "Name: " + name + "\n" +
+      "Phone: " + phone + "\n" +
+      "Service: " + service + "\n" +
+      "Project Details: " + details;
+
+    const whatsappURL =
+      "https://wa.me/" + BUSINESS_WHATSAPP +
+      "?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+  }
+);
+
+</script>
+
+</body>
+</html>
